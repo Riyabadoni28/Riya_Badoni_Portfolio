@@ -1,0 +1,42 @@
+$color: rgb(32, 32, 145);
+
+.center_align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center_align_horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+.center_align_vertical {
+    display: flex;
+    align-items: center;
+}
+
+.cursor_pointer {
+    cursor: pointer !important;
+}
+
+.cursor_default {
+    cursor: default;
+}
+
+
+@mixin button_color_hover($background: $tsc_theme_btn_light_background_color) {
+    &:hover {
+        background-color: $background;
+        color: white;
+        transition: all 0.3s ease !important;
+    }
+}
+
+.button_color {                                /*Secondary button: Secondary button (Application specific color, with shadow effect on hover and background color)*/
+    background-color: white;
+    color: $color;
+    border-color: $color;
+
+    @include button_color_hover($color);
+}

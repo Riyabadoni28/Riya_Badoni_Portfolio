@@ -1,0 +1,88 @@
+body,
+html {
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+.container-fluid {
+    max-width: 100%;
+    /* Ensure full width is respected */
+}
+
+.row {
+    margin: 0;
+    /* Remove unwanted margins */
+}
+
+.logo_image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.background_image {
+    width: 100%;
+    // aspect-ratio: 8/10;
+}
+
+.background {
+    background-image: url('/assets/images/background-image.jpg');
+    /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.content {
+    padding: 20px;
+    border-radius: 50%;
+    padding-top: 24%;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    /* This makes the navbar stick to the top */
+    width: 100%;
+    z-index: 1000;
+    /* Ensure it's above other content */
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.dishes {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.dishes:hover {
+    animation: pulse 0.6s ease-in-out;
+}
+
+.max-width-1024 { 
+    max-width: 1024px; 
+    margin: 0 auto; 
+  }
+  
