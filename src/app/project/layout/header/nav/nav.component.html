@@ -29,11 +29,14 @@
                     shopping_cart
                 </span>
 
-                <span class="ms-2">
+                <div class="like-container fs-5" (click)="clickLike()">
                     ❤️
-                </span>
+                    <span *ngIf="likeCount != 0" class="like-badge">{{ likeCount }}</span>
+                </div>
+                
+                
                 <input class="form-control ms-2 me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn button_color" type="submit">Search</button>
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
             </form>
         </div>
     </div>

@@ -7,7 +7,7 @@ declare const google: any;
 @Component({
     selector: 'app-nav',
     standalone: true, // Marks it as standalone
-    imports: [CommonModule,RouterModule], // Imports necessary modules
+    imports: [CommonModule, RouterModule], // Imports necessary modules
     templateUrl: './nav.component.html',
     styleUrl: './nav.component.scss'
 })
@@ -15,5 +15,11 @@ declare const google: any;
 
 export class NavComponent {
 
+    likeCount: number = 0;
 
+    clickLike() {
+        this.likeCount++;
+    }
 }
+
+
