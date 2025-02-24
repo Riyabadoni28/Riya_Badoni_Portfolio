@@ -40,3 +40,7 @@ $color: rgb(32, 32, 145);
 
     @include button_color_hover($color);
 }
+
+body {
+    background-color: #f5f5f5; /* Change to your desired color */
+}
